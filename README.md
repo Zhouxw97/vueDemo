@@ -21,3 +21,9 @@ npm install vue vue-router vuex axios
 ├── babel.config.js
 ├── package-lock.json
 ├── package.json
+
+
+项目构建完成，可执行以下命令：
+  cd vue-demo
+  npm install
+  npm run dev
