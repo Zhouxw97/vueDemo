@@ -27,3 +27,5 @@ npm install vue vue-router vuex axios
   cd vue-demo
   npm install
   npm run dev
+
+git master
