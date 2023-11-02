@@ -27,3 +27,5 @@ npm install vue vue-router vuex axios
   cd vue-demo
   npm install
   npm run dev
+
+https://www.quanxiaoha.com/vue3/vscode-dev-first-vue3-project.html
