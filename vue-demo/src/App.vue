@@ -7,16 +7,28 @@ const obj = reactive({
 
 const path = ref("https://www.quanxiaoha.com")
 
+const isActive = ref(true)
+
+const classes = {
+  red: 'red',
+  background : 'bg-back'
+}
+
 </script>
 
 <template>
- <div v-text="obj.text"></div>
- <div v-html="obj.text"></div>
-
- <a :href="path" style="display: block;">小哈教程</a>
- <a v-bind:href="path" style="display: block;">小哈教程</a>
+ <div>
+   <p><a v-bind:class="[classes.red,classes.background]">哈哈</a></p>
+   <p><a v-bind:class="isActive ? 'red':'' ">哈哈</a></p>
+ </div>
 </template>
 
 <style scoped>
-   
+   .bg-back {
+      background-color: black;
+   }
+   .red  {
+      color: red;
+   }
+
 </style>
