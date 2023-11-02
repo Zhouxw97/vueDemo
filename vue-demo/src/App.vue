@@ -1,14 +1,40 @@
 <script setup>
-import { ref } from 'vue';
-/* 节点中间用于放置 javascript 代码； */
-const title = ref('插值表达式')
+import { reactive } from 'vue';
+const obj = reactive({
+  title: 'Hello World',
+  num:1,
+  num2:2,
+  isSucces:true,
+  arr:[1,2,3,4,5],
+  subObj:{
+    name:'subObj',
+    age:18
+  }
+});
+
 </script>
 
 <template>
- <!--  节点中间用于放置 html 代码； -->
- <h1>{{title}}</h1>
+ <div>{{ obj.title }}</div>
+ <div>{{ obj.num }}</div>
+ <div>{{ obj.num > obj.num2 }}</div>
+
+ <div>{{ obj.isSucces }}</div>
+
+ <div>{{ obj.arr }}</div>
+
+ <div>{{ obj.subObj }}</div>
+ <div>{{ obj.subObj.name }}</div>
+
+ <div>{{ obj.isSucces? 1:2 }}</div>
+ <div v-text="obj.title"></div>
+
+ <div v-once>{{ obj.title }}</div>
+ <input v-model="obj.title" type="text">
+
+
 </template>
 
 <style scoped>
-   /* 节点中间用于放置 css 代码； */
+   
 </style>
